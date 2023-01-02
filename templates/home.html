@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--Background Image-->
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
 
-.bg {
-  /* The image used */
-  background-image: url('/static/img.jpg');
-  background-color: rgba(255, 255, 255, 0.405);
-    background-blend-mode: lighten;
+    .bg {
+      /* The image used */
+      background-image: url('/static/img1.jpg');
+      background-color: rgba(255, 255, 255, 0.067);
+      background-blend-mode: lighten;
 
-  /* Full height */
-  height: 100%; 
+      /* Full height */
+      max-height:auto;
+      width:auto;
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+     /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+    }
 
-</style>
+  </style>
 </head>
 
 
 <body>
-<div class="bg">
+  <div class="bg">
     
-<!--FOR THE HEADER SECTION-->
+  <!--FOR THE HEADER SECTION-->
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,7 +48,7 @@ body, html {
     
     .topnav {
       overflow: hidden;
-      background-color: #333;
+      background-color: rgba(51, 51, 51, 0.311);
     }
     
     .topnav a {
@@ -78,13 +83,17 @@ body, html {
     <style>
         h1 {
           font-size: 60px;
+          color: #ffffff;
+          font-weight: bold;
           text-align: center;
         }
 
         p.a 
         {
             font-size: 20px;
-            text-align-last: center;
+            color: #ffffff;
+            font-weight: bold;
+            text-align: center;
         }
     </style>
     
@@ -92,55 +101,164 @@ body, html {
     <p class="a">Nice to see you here!</p>
     <p class="a">We specialize in legal assistance related to immigration and Expat issue in the territory of the Republic of Poland.</p>
 
-<!--FOR THE LOGIN SECTION-->
 
-        <form action="#", method="post">
-            <h2>Login</h2>
-            Email: <input type="text" name="nm" />
-            <br><br>
-            Password: <input type="password" name="passwd" />
-            <br><br>
- 
-            <input type="submit" value="submit" />
-        </form>
+    <!--LOGIN AND REGISTRATION SECTION-->
+
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+      <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: black;
+      }
+      
+      * {
+        box-sizing: border-box;
+      }
+      
+      fieldset {
+        font-size: 12px;
+        padding: 10px;
+        width: 250px;
+        text-align: left;
+      }
+
+      /* Add padding to containers */
+      .container {
+        padding: 50px;
+        border-radius: 5px;
+        width: 80%;
+        background-color: rgba(255, 255, 255, 0.659);
+        text-align: center;
+      }
+
+      /* Full-width input fields */
+      input[type=text], input[type=password] {
+        width: 40%;
+        padding: 10px;
+        margin: 5px 0 10px 0;
+        border-radius: 5px;
+        display: inline-block;
+        border: none;
+        background: #eff8ff;
+      }
+      
+      input[type=text]:focus, input[type=password]:focus {
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+        outline: none;
+        text-align: left;
+      }
+      
+      /* Overwrite default styles of hr */
+      hr {
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      
+      /* Set a style for the submit button */
+      .registerbtn {
+        background-color: #e00a0a;
+        color: white;
+        border-radius: 5px;
+        padding: 10px 15px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 20%;
+        opacity: 0.9;
+        text-align: center;
+      }
+      
+      .registerbtn:hover {
+        opacity: 0.6;
+      }
+      
+      /* Add a blue text color to links */
+      a {
+        color: rgb(255, 30, 30);
+      }
+      
+
+      /* Two-column layout */
+      .col {
+        float: left;
+        width: 50%;
+        margin: auto;
+        padding: 0 50px;
+        margin-top: 6px;
+      }
+
+
+      /* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 650px) 
+      {
+      .col {
+        width: 100%;
+        margin-top: 0;
+      }
+      }
+
+      </style>
+      </head>
     </body>
 
 
-<!--Registration Section-->
+    <!--FOR THE LOGIN SECTION-->
 
-<form action="action_page.php">
+  
     <div class="container">
-      <h2>Register</h2>
-      <p>Please fill in this form to create an account.</p>
-      <hr>
-  
-      <label for="name"><b>Name</b></label>
-      <input type="text" placeholder="Enter Name" name="name" id="name" required>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Login</h2>
 
-      <label for="surname"><b>Surname</b></label>
-      <input type="text" placeholder="Enter Surname" name="surname" id="surname" required>
+          <form action="/action_page.php">
 
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <br><br>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            <br><br>
+
+            <button type="submit" class="registerbtn">Submit</button>
+
+          </form>
+
+        </div>
+          
+        <div class="col-md-6">
+          <h2>Register</h2>
+          <p>Please fill in this form to create an account.</p>
+
+          <form action="/action_page.php">
+            <hr>
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="name" id="name" required>
+            <br><br>
+            <label for="surname"><b>Surname</b></label>
+            <input type="text" placeholder="Enter Surname" name="surname" id="surname" required>
+            <br><br>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <br><br>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            <br><br>
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+            <hr>
   
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-  
-      <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-      <hr>
-  
-      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-      <button type="submit" class="registerbtn">Register</button>
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+            <button type="submit" class="registerbtn">Register</button>
+
+          </form>
+        </div>
+      </div>
     </div>
-  
-    <div class="container signin">
-      <p>Already have an account? <a href="#">Sign in</a>.</p>
-    </div>
-  </form>
+  </div>
 
-
-  
-</div>
 </body>
 </html>
