@@ -25,6 +25,7 @@ CREATE TABLE "applications" (
 	"assigned_consultant_id"	INTEGER,
 	"created_at"	DATETIME DEFAULT CURRENT_TIMESTAMP,
 	"updated_at"	DATETIME DEFAULT CURRENT_TIMESTAMP,
+    "status" TEXT,
 	PRIMARY KEY("id" AUTOINCREMENT)
 );
 
@@ -69,5 +70,7 @@ AFTER UPDATE ON application_responses
 FOR EACH ROW BEGIN UPDATE application_responses 
 SET updated_at = CURRENT_TIMESTAMP WHERE id = OLD.id;
 END
+
+
 
 
