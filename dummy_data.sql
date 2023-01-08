@@ -61,3 +61,11 @@ VALUES
     (10,2,"Yes"),
     (11,2,"No"),
     (12,2, "5");
+
+
+    INSERT INTO consultants (first_name, last_name, company)
+VALUES 
+    ("Jim", "Powers", "Deloitte"),
+    ("Olga","Rogova", "Bain"),
+    ("Jack", "Ma", "Deloitte"),
+    ("Adithya", "Jain", "E&Y");

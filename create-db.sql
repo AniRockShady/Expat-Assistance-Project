@@ -25,7 +25,7 @@ CREATE TABLE "applications" (
 	"assigned_consultant_id"	INTEGER,
 	"created_at"	DATETIME DEFAULT CURRENT_TIMESTAMP,
 	"updated_at"	DATETIME DEFAULT CURRENT_TIMESTAMP,
-    "status" TEXT,
+    "status" TEXT DEFAULT 'Submitted',
 	PRIMARY KEY("id" AUTOINCREMENT)
 );
 
@@ -63,13 +63,13 @@ CREATE TABLE "questions" (
 CREATE TRIGGER updated_applications
 AFTER UPDATE ON applications FOR EACH ROW BEGIN UPDATE applications 
 SET updated_at = CURRENT_TIMESTAMP WHERE id = OLD.id; 
-END
+END;
 
 CREATE TRIGGER updated_responses
 AFTER UPDATE ON application_responses
 FOR EACH ROW BEGIN UPDATE application_responses 
 SET updated_at = CURRENT_TIMESTAMP WHERE id = OLD.id;
-END
+END;
 
 
 
