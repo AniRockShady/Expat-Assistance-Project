@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+   <body>
+      <table border = 1>
+         <thead>
+            <td>Application</td>
+            <td>User name</td>
+            <td>User surname</td>
+            <td>Submitted</td>
+            <td>Updated</td>
+            <td>Consultant name</td>
+            <td>Consultant surname</td>
+            <td>Company</td>
+            <td>Status</td>
+
+            
+
+
+         </thead>
+        
+         {% for row in rows %}
+            <tr>
+               <td>{{row["title"]}}</td>
+               <td>{{row["first_name"]}}</td>
+               <td> {{row["last_name"]}}</td>
+               <td> {{row["created_at"]}}</td>
+               <td> {{row["updated_at"]}}</td>
+               <td> {{row["first_name"]}}</td>
+               <td> {{row["last_name"]}}</td>
+               <td> {{row["company_name"]}}</td>
+               <td> {{row["status"]}}</td>
+
+            </tr>
+         {% endfor %}
+      </table>
+     
+      <a href = "/">Go back to home page</a>
+   </body>
+</html>    
