@@ -211,10 +211,10 @@
   
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" method = "POST">
           <h2>Login</h2>
 
-          <form action= "{{ url_for('registered') }}" method = "POST">
+          <form action= "{{ url_for('login') }}" method = "POST">
 
             <label for="email"><b>Email</b></label>
             <input type="text" placeholder="Enter Email" name="email" id="email" required>
