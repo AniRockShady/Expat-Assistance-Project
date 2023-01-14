@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+   <body>
+      <table border = 1>
+         <thead>
+            <td>ID</td>
+            <td>Application Type</td>
+
+
+         </thead>
+        
+         {% for row in rows %}
+            <tr>
+               <td>{{row["id"]}}</td>
+               <td><a href="/users/{{user_id}}/applications/{{row['id']}}/create">{{row["title"]}}</a></td>
+            </tr>
+         {% endfor %}
+      </table>
+     
+
+      <a href = "/">Go back to home page</a>
+   </body>
+</html>    
