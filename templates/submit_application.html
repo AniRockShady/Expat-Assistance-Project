@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+   <body>
+      <a href = "/">Go back to home page</a>
+
+      <h3>{{ msg }}</h3>
+      <h3>Thank you for submitting the application with ID #{{application_id}}.  It is now submitted as below</h3>
+      <table border = 1>
+         <thead>
+            <td>Question ID</td>
+            <td>Response</td>
+
+         </thead>
+      
+         {% for question_id in response %}
+            <tr>
+               <td>{{question_id}}</td>
+               <td>{{response[question_id]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+
+      You can track your application cases <a href="/users/{{user_id}}/cases">here</a>
+   </body>
+</html>    

@@ -1,19 +1,30 @@
 <!doctype html>
 <html>
    <body>
-      <table border = 1>
-         <thead>
-            <td>title</td>
-
-         </thead>
-        
-         {% for row in rows %}
-            <tr>
-               <td>{{row["title"]}}</td>
-            </tr>
-         {% endfor %}
-      </table>
-     
       <a href = "/">Go back to home page</a>
+
+      <br />
+      <form method="POST" action="/users/{{user_id}}/applications/{{application_type_id}}/submit">
+         <table border = 1>
+            <thead>
+               <td>Question Id</td>
+               <td>Application Question</td>
+               <td>Input</td>
+
+            </thead>
+         
+            {% for question in questions %}
+               <tr>
+                  <td>{{question["id"]}}</td>
+                  <td><label for="{{question['id']}}">{{question["title"]}}</label></td>
+                  <td>
+                     <input type="text" id="{{question['id']}}" name="{{question['id']}}" />
+                  </td>
+               </tr>
+            {% endfor %}
+         </table>
+         <br />
+         <input type="submit" title="Create Application" />
+      </form>
    </body>
 </html>    

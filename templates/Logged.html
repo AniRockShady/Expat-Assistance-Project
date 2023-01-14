@@ -6,6 +6,12 @@
     </head>
 
     <body>
-        <h1> Welcome to the Expat Assistance! </h1>
+        <h1> Welcome to the Expat Assistance! Your user id is {{user['id']}}
+
+            You can track your existing application cases <a href="/users/{{user['id']}}/cases">here</a>
+
+            Submit your application <a href="/users/{{user['id']}}/applications/{{application_type_id}}/create">here</a>
+
+        </h1>
     </body>
 </html>
