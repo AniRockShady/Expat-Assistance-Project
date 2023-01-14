@@ -51,41 +51,12 @@
     </body>
 
     <body>
-        <table border = 1>
-           <thead>
-              <td>Application</td>
-              <td>User name</td>
-              <td>User surname</td>
-              <td>Submitted</td>
-              <td>Updated</td>
-              <td>Consultant name</td>
-              <td>Consultant surname</td>
-              <td>Company</td>
-              <td>Status</td>
-  
-              
-  
-  
-           </thead>
-          
-           {% for row in rows %}
-              <tr>
-                 <td>{{row["title"]}}</td>
-                 <td>{{row["user_first_name"]}}</td>
-                 <td> {{row["user_last_name"]}}</td>
-                 <td> {{row["created_at"]}}</td>
-                 <td> {{row["updated_at"]}}</td>
-                 <td> {{row["consultant_first_name"]}}</td>
-                 <td> {{row["consultant_last_name"]}}</td>
-                 <td> {{row["company_name"]}}</td>
-                 <td> {{row["status"]}}</td>
-  
-              </tr>
-           {% endfor %}
-        </table>
-       
-        <a href = "/">
-            Go back to home page
-        </a>
-     </body>
+        <h1> Welcome to the Expat Assistance! Your user id is {{user['id']}}
+
+            You can track your existing application cases <a href="/users/{{user['id']}}/cases">here</a>
+
+            Submit your application <a href="/users/{{user['id']}}/applications/{{application_type_id}}/create">here</a>
+
+        </h1>
+    </body>
 </html>
