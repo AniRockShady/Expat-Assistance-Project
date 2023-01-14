@@ -2,7 +2,7 @@ CREATE TABLE "users" (
 	"id"	INTEGER,
 	"first_name"	TEXT,
 	"last_name"	TEXT,
-	"email"	TEXT,
+	"email"	TEXT UNIQUE,
     "created_at" DATETIME DEFAULT CURRENT_TIMESTAMP,
 	"pass_hash"	TEXT, 
 	PRIMARY KEY("id" AUTOINCREMENT)
