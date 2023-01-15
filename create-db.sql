@@ -15,6 +15,8 @@ CREATE TABLE "consultants" (
 	"email"	TEXT,
 	"company_name"	TEXT,
 	"profile_photo"	BLOB,
+	"user_id"	INTEGER,
+
 	PRIMARY KEY("id" AUTOINCREMENT)
 );
 
