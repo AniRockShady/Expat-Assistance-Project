@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+   <body>
+
+    <h3>{{msg}}</h3>
+    <table border = 1>
+        <thead>
+           <td>Application</td>
+           <td>User name</td>
+           <td>User surname</td>
+           <td>Submitted</td>
+           <td>Updated</td>
+           <td>Status</td>
+
+           
+
+
+        </thead>
+           <tr>
+              <td>{{application["title"]}}</td>
+              <td>{{application["user_first_name"]}}</td>
+              <td> {{application["user_last_name"]}}</td>
+              <td> {{application["created_at"]}}</td>
+              <td> {{application["updated_at"]}}</td>
+              <td> {{application["status"]}}</td>
+
+           </tr>
+    </table>
+    <br />
+    <table border = 1>
+        <thead>
+           <td>Question ID</td>
+           <td>Question Title</td>
+           <td>Response</td>
+
+        </thead>
+     
+        {% for response in responses %}
+           <tr>
+                <td>{{response['question_id']}}</td>
+              <td>{{response['title']}}</td>
+              <td>{{response['response']}}</td>
+           </tr>
+        {% endfor %}
+     </table>
+     <br />
+     <form action="/consultants/{{consultant_id}}/cases/{{application['id']}}" method="POST">
+        <label for="application_status">Select Status:</label>
+        <select name="application_status" id="application_status">
+            <option hidden disabled selected></option>
+            <option value="submitted">Submitted</option>
+            <option value="in_progress">In Progress</option>
+            <option value="finished">Finished</option>
+        </select>
+        <br /><br />
+        <input type="submit" value="Update Application" />
+     </form>
+     <br />
+     
+      <a href = "/">Go back to home page</a>
+   </body>
+</html>    

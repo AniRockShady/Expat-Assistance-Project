@@ -29,6 +29,7 @@
                <td> {{row["consultant_last_name"]}}</td>
                <td> {{row["company_name"]}}</td>
                <td> {{row["status"]}}</td>
+               <td><a href="/consultants/{{consultant_id}}/cases/{{row['id']}}">Open Case</a></td>
 
             </tr>
          {% endfor %}
