@@ -1,6 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
+<!--Background Image-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .bg {
+      /* The image used */
+      background-image: url('/static/img.jpg');
+      background-color: rgba(255, 255, 255, 0.801);
+      background-blend-mode: lighten;
+
+      /* Full height */
+      max-height:auto;
+      width:auto;
+
+     /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+    }
+
+  </style>
+</head>
+
+
+<body>
+  <div class="bg">
+
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -36,25 +72,43 @@
     </head>
     <body>
     
-    <div class="topnav">
-      <a class="active" href="/">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-    </div>
+      <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="/About">About Us</a>
+      </div>
     
-    <div style="padding-left:16px">
-      <h2>Welcome to Expat Assistance!</h2>
-      <p>Choose your content</p>
-    </div>
+
+    
+      <head>
+        <style>
+          body{
+              text-align: center;
+          }
+        </style>
+      </head>
     
     </body>
+
+
+    <body><h1 style="font-size: 42px;"> Welcome to the Expat Assistance! Your user id is {{user['id']}}</h1></body>
 
     <body>
-        <h1> Welcome to the Expat Assistance! Your user id is {{user['id']}}</h1>
 
-        <h1>You can track your existing application cases <a href="/users/{{user['id']}}/cases">here</a></h1>
+      <div style="display: flex; align-items: center; justify-content: center; min-height: 70vh;">
+          
+        <div>
 
-        <h1>Submit your application <a href="/users/{{user['id']}}/select_application">here</a></h1>
+          <h2 style="margin-bottom: 30px; font-size: 38px;"> You can track your existing application cases <a href="/users/{{user['id']}}/cases">here</a></h2>
+
+          <h2 style="font-size: 38px;">Submit your application <a href="/users/{{user['id']}}/select_application">here</a></h2>
+      </div>
+      </div>
     </body>
+
+    <footer style="display: flex; align-items: center; justify-content: center; min-height: 20vh; color:rgb(0, 0, 0)">
+      <p>Copyright ©2023 Expat Assistance</p>
+  </footer>
+  
 </html>

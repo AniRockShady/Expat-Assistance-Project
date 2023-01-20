@@ -1,23 +1,135 @@
 <!doctype html>
+
+<html lang="en" dir="ltr">
+
+      <!--Background Image-->
+
+      <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <style>
+            body, html {
+               height: 100%;
+               margin: 0;
+            }
+
+            .bg {
+               /* The image used */
+               background-image: url('/static/img2.jpg');
+               background-color: rgba(255, 255, 255, 0.379);
+               background-blend-mode: lighten;
+
+               /* Full height */
+               max-height:auto;
+               width:auto;
+
+            /* Center and scale the image nicely */
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;
+               
+            }
+
+         </style>
+      </head>
+
+
+      <body>
+         <div class="bg">
+
+
+         <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+               body {
+                  margin: 0;
+                  font-family: Arial, Helvetica, sans-serif;
+               }
+               
+               .topnav {
+                  overflow: hidden;
+                  background-color: #333;
+               }
+               
+               .topnav a {
+                  float: left;
+                  color: #f2f2f2;
+                  text-align: center;
+                  padding: 14px 16px;
+                  text-decoration: none;
+                  font-size: 17px;
+               }
+               
+               .topnav a:hover {
+                  background-color: #ddd;
+                  color: black;
+               }
+               
+               .topnav a.active {
+                  background-color: #04AA6D;
+                  color: white;
+               }
+            </style>
+         </head>
+         <body>
+         
+            <div class="topnav">
+            <a class="active" href="/">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="/About">About Us</a>
+            </div>
+         
+
+         
+            <head>
+            <style>
+               body{
+                  text-align: center;
+               }
+            </style>
+            </head>
+         
+         </body>
+    </html>
+
+
+
+    <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+
 <html>
    <body>
-      <table border = 1>
+      <h1 style="font-size: 42px;"> Welcome to Expat Assistance.</h1>
+      <h2 style="font-size: 35px;">Please select the type of application here.</h2>
+      <div style="display: flex; align-items: center; justify-content: center; min-height: 90vh;">
+
+         <div class="container">
+            <table class="table table-bordered" style="border: 1px solid black; background-color: rgb(228, 228, 228); opacity: 0.9;">
          <thead>
-            <td>ID</td>
-            <td>Application Type</td>
+            <td style="font-weight: bold;font-size: large;">ID</td>
+            <td style="font-weight: bold;font-size: large;">Application Type</td>
 
 
          </thead>
         
          {% for row in rows %}
             <tr>
-               <td>{{row["id"]}}</td>
-               <td><a href="/users/{{user_id}}/applications/{{row['id']}}/create">{{row["title"]}}</a></td>
+               <td style="font-weight: bold;font-size: large;">{{row["id"]}}</td>
+               <td style="font-weight: bold;font-size: large;"><a href="/users/{{user_id}}/applications/{{row['id']}}/create">{{row["title"]}}</a></td>
             </tr>
          {% endfor %}
       </table>
      
-
-      <a href = "/">Go back to home page</a>
+      <div style="bottom: 0;font-size: medium;">
+         <a href = "/" style="color: rgb(24, 3, 255); margin: 0 auto; background-color: rgba(255, 255, 255, 0.516); padding: 2px 10px;">Go back to home page</a>
+      </div>
    </body>
 </html>    
